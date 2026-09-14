@@ -4,19 +4,31 @@ from calculos import calcular_totais_e_saldos
 from relatorios import exibir_resumo
 
 
-def main():
-    print("---- SISTEMA DE DIVISÃO DE DESPESAS DA TURMA ----")
+def main() -> None:
+    """
+    Executa o fluxo principal do sistema.
 
-    #Cadastrar as pessoas
+    A função organiza a execução das etapas do programa:
+    cadastro dos participantes, registro das despesas,
+    cálculo dos valores e apresentação do relatório final.
+
+    Retorna:
+        None: Apenas coordena a execução do programa.
+    """
+
+    print("\n---- SISTEMA DE DIVISÃO DE DESPESAS DA TURMA ----")
+
+    # Cadastra os participantes.
     participantes = cadastrar_participantes()
 
-    #Registrar cada despesa informando pagador, descrição, categoria e valor
+    # Registra as despesas do evento.
     despesas = registrar_despesas(participantes)
 
-    #Processar os valores, calcular os saldos
-    resultados = calcular_totais_e_saldos(participantes, despesas)
+    # Realiza os cálculos das despesas e dos saldos.
+    resultados = calcular_totais_e_saldos(
+        participantes,despesas)
 
-    #Apresentar o resumo
+    # Exibe o resumo final para o usuário.
     exibir_resumo(resultados)
 
 
