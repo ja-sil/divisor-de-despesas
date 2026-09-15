@@ -13,6 +13,5 @@ Sistema modular para controle e divisão justa de gastos em viagens e eventos.
 * * **Execução:** `python main.py`
 
 
-=======
 * Alunas: Amanda Lemos e Jasirela Santos
 
