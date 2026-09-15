@@ -9,10 +9,10 @@ Sistema modular para controle e divisão justa de gastos em viagens e eventos.
 * `calculos.py`: Processamento de totais, cota média e saldos (+ a receber / - a pagar).
 * `relatorios.py`: Exibição do extrato final no terminal.
 
-<<<<<<< HEAD
+
+* * **Execução:** `python main.py`
+
+
 =======
 * Alunas: Amanda Lemos e Jasirela Santos
 
-
->>>>>>> 679e3c9da0630db8afe3da68c5ba9d73b66b932c
-* **Execução:** `python main.py`
