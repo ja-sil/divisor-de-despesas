@@ -35,7 +35,6 @@ def cadastrar_participantes() -> list[str]:
 
     return participantes
 
-
 def buscar_participante(
     participantes: list[str],
     numero: int) -> str | None:

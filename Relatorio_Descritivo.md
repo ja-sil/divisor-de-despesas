@@ -25,15 +25,15 @@ A organização em módulos facilita a compreensão do código, evita que todas 
 
 O `main.py` é o ponto de entrada da aplicação. Sua principal função é coordenar o funcionamento do sistema.
 
-Ele solicita a quantidade de participantes, chama a função responsável pelo cadastro, recebe as informações das despesas e utiliza as funções dos outros módulos para realizar os cálculos e apresentar os resultados.
+Ele chama as funções responsáveis pelo cadastro dos participantes, registro das despesas, realização dos cálculos e apresentação dos resultados.
 
 Dessa forma, o `main.py` não concentra toda a lógica do programa, funcionando principalmente como coordenador da aplicação.
 
 ### participantes.py
 
-O módulo `participantes.py` é responsável pelo cadastro e validação dos participantes.
+O módulo `participantes.py` é responsável pelo cadastro e busca dos participantes.
 
-Ele possui funções para cadastrar os nomes das pessoas que participarão da divisão das despesas e verificar se uma pessoa informada está cadastrada no grupo.
+Ele possui a função responsável por cadastrar os nomes das pessoas que participarão da divisão das despesas e também a função `buscar_participante()`, utilizada para localizar um participante pelo número informado.
 
 ### despesas.py
 
@@ -57,8 +57,7 @@ Entre suas funções estão:
 * calcular o total gasto pelo grupo;
 * calcular o valor médio que cada participante deveria pagar;
 * calcular quanto cada participante pagou;
-* calcular o saldo individual;
-* calcular as transferências entre os participantes.
+* calcular o saldo individual.
 
 O saldo é calculado comparando o valor que a pessoa pagou com o valor que deveria pagar. Quando o saldo é positivo, a pessoa tem dinheiro a receber. Quando o saldo é negativo, a pessoa precisa pagar.
 
@@ -66,11 +65,9 @@ O saldo é calculado comparando o valor que a pessoa pagou com o valor que dever
 
 O módulo `relatorios.py` é responsável pela apresentação dos resultados no terminal.
 
-Ele exibe as despesas cadastradas, o total pago por cada participante, o total gasto pelo grupo, o valor por pessoa, os saldos individuais e as transferências necessárias.
+Ele exibe o total pago por cada participante, o total gasto pelo grupo, o valor que cada pessoa deveria pagar e os saldos individuais.
 
 Esse módulo recebe os resultados dos cálculos realizados pelo `calculos.py`, não sendo responsável por realizar as operações matemáticas.
-
-Além disso, a função `formatar_moeda()` foi colocada neste módulo para formatar os valores monetários e é reutilizada pelas outras funções de relatório.
 
 ## 3. Modularização
 
@@ -80,4 +77,18 @@ Por exemplo, caso seja necessário modificar a forma como os cálculos dos saldo
 
 Essa separação também torna o código mais organizado e facilita sua manutenção.
 
-## 4. Reu
+## 4. Reutilização de funções
+
+Um exemplo de reutilização ocorre com a função `buscar_participante()`.
+
+Essa função foi criada no módulo `participantes.py` para localizar um participante pelo número. Depois, ela foi importada e reutilizada no módulo `despesas.py` para identificar quem realizou cada pagamento.
+
+Dessa forma, a mesma função não precisou ser criada novamente em outro arquivo, evitando repetição de código.
+
+## 5. Conclusão
+
+A divisão do projeto em módulos permitiu organizar melhor o sistema de acordo com a responsabilidade de cada parte.
+
+O `main.py` coordena a execução, enquanto os módulos `participantes.py`, `despesas.py`, `calculos.py` e `relatorios.py` ficam responsáveis por funções específicas.
+
+Essa organização facilita a leitura, manutenção e reutilização do código, além de atender aos princípios de modularização propostos na atividade.

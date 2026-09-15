@@ -5,7 +5,7 @@ def exibir_resumo(resultados: dict) -> None:
     A função apresenta quanto cada participante pagou,
     o total gasto pelo grupo, o valor médio por pessoa
     e o saldo individual.
-
+    
     O saldo positivo aparece com o sinal + e representa
     um valor que a pessoa deve receber. O saldo negativo
     representa um valor que a pessoa deve pagar.

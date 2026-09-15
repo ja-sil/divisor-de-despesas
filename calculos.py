@@ -20,8 +20,7 @@ def calcular_totais_e_saldos(
     """
 
     # Soma o valor de todas as despesas.
-    total_grupo = sum(
-        d["valor"] for d in despesas)
+    total_grupo = sum(d["valor"] for d in despesas)
 
     # Verifica quantas pessoas participarão da divisão.
     qtd_participantes = len(participantes)
@@ -50,8 +49,7 @@ def calcular_totais_e_saldos(
 
     for pessoa in participantes:
         saldos[pessoa] = (
-            pago_por_pessoa[pessoa] - valor_medio
-        )
+            pago_por_pessoa[pessoa] - valor_medio)
 
     return {
         "total_grupo": total_grupo,

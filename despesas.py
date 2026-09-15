@@ -1,6 +1,5 @@
 from participantes import buscar_participante
 
-
 def registrar_despesas(participantes: list[str]) -> list[dict]:
     """
     Registra as despesas realizadas durante o evento.

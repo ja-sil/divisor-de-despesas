@@ -3,7 +3,6 @@ from despesas import registrar_despesas
 from calculos import calcular_totais_e_saldos
 from relatorios import exibir_resumo
 
-
 def main() -> None:
     """
     Executa o fluxo principal do sistema.
